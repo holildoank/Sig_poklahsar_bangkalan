@@ -95,6 +95,9 @@ class M_poklahsar extends CI_Model{
     public function ajax_list_olahan() {
         $dataorder    = array();
         $dataorder[1] = "bahanpoklahsar_nama";
+        $dataorder[2] = "bahan";
+        $dataorder[3] = "jumlah";
+        $dataorder[4] = "tahun_olahan";
 
         $start = intval($_POST['start']);
         $sEcho = intval($_POST['draw']);
@@ -135,10 +138,8 @@ class M_poklahsar extends CI_Model{
         foreach ($data as $d) {
             $i++;
             $id = $d->bahanpoklahsar_id;
-
             $edit = '';
             $delete = '';
-
             $edit='<a href="#" onclick="event.preventDefault();btn_edit_olahan('.$id.',\''.$d->bahanpoklahsar_nama.'\',\''.$d->tahun_olahan.'\',\''.$d->bahan.'\',\''.$d->jumlah.'\')" class="icon-action" title="edit">
             <i class="fa fa-pencil"></i>
             </a> ';
@@ -149,7 +150,10 @@ class M_poklahsar extends CI_Model{
             $r = array();
             $r[0] = $i;
             $r[1] = $d->bahanpoklahsar_nama;
-            $r[2] = $edit.$delete;
+            $r[2] = $d->bahan;
+            $r[3] = $d->jumlah;
+            $r[4] = $d->tahun_olahan;
+            $r[5] = $edit.$delete;
             array_push($result, $r);
         }
 

@@ -63,6 +63,7 @@ var validate_form_poklahsar = function() {
         ignore: "",  // validate all fields including form hidden input
         messages:
             {
+							pemilik : "Form nama pemilik  tidak boleh Kosong",
                 poklahsar_nama : "Form nama poklahsar  tidak boleh Kosong",
                 alamat_poklahsar : "Form Alamat Tidak Boleh Kosong",
                 jumproduk_tahun : "Form  jumlah produk Tidak Boleh Kosong",
@@ -70,7 +71,10 @@ var validate_form_poklahsar = function() {
                 long : "Form  Titik Kordinat Longitude Tidak Boleh Kosong",
             },
         rules: {
-            poklahsar_nama: {
+            pemilik: {
+                required: true
+            },
+						poklahsar_nama: {
                 required: true
             },
             alamat_poklahsar: {

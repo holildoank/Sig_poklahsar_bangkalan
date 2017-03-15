@@ -20,10 +20,10 @@ if($mode=='edit'){
 	                    </div>
 	                    <div class="row">
 	    					<div class="col-md-12">
-	                            <div class="form-group">
-	                                <label class="control-label">Nama Usergroup *</label>
-	                                <input type="text" name="usergroup_nama" class="form-control" value="<?php echo @$dt->usergroup_nama ?>" placeholder="Nama User Group" />
-	                            </div>
+                  <div class="form-group">
+                      <label class="control-label">Nama Usergroup *</label>
+                      <input type="text" name="usergroup_nama" class="form-control" value="<?php echo @$dt->usergroup_nama ?>" placeholder="Nama User Group" />
+                  </div>
 								<div class="form-group">
 	                                <label class="control-label">Keterangan *</label>
 									<textarea class="form-control" name="usergroup_ket" rows="2" placeholder="Keterangan"><?php echo @$dt->usergroup_ket ?></textarea>

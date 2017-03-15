@@ -50,6 +50,7 @@ class C_poklahsar extends MX_Controller {
 			'alamat_poklahsar'     => $this->input->post('alamat_poklahsar'),
 			'jumproduk_tahun'     => $this->input->post('jumproduk_tahun'),
 			'hp_poklahsar'     => $this->input->post('hp_poklahsar'),
+			'pemilik'     => $this->input->post('pemilik'),
 			'lat'     => $this->input->post('lat'),
 			'long'     => $this->input->post('long'),
 		);
@@ -83,6 +84,7 @@ class C_poklahsar extends MX_Controller {
 			'alamat_poklahsar'     => $this->input->post('alamat_poklahsar'),
 			'jumproduk_tahun'     => $this->input->post('jumproduk_tahun'),
 			'hp_poklahsar'     => $this->input->post('hp_poklahsar'),
+			'pemilik'     => $this->input->post('pemilik'),
 			'lat'     => $this->input->post('lat'),
 			'long'     => $this->input->post('long'),
 		);

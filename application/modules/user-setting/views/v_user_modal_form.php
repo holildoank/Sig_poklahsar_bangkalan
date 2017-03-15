@@ -29,16 +29,16 @@ if($mode=='edit'){
 											<?php echo '<option value="'.$r->usergroup_id.'" '.$terpilih.'>'.$r->usergroup_nama.'</option>' ?>
 										<?php endforeach; ?>
 									</select>
-	                            </div>
-	                            <div class="form-group">
-	                                <label class="control-label">User Name *</label>
-	                                <input type="text" name="user_username" class="form-control" value="<?php echo @$dt->user_username ?>" placeholder="User Name" />
-	                            </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">User Name *</label>
+                        <input type="text" name="user_username" class="form-control" value="<?php echo @$dt->user_username ?>" placeholder="User Name" />
+                    </div>
 								<div class="form-group">
-	                                <label class="control-label">Password <?php echo $mode=='add' ? '*' : '' ?></label>
-	                                <input type="password" name="user_password" id="user_password" class="form-control" value="" placeholder="Password" />
+                  <label class="control-label">Password <?php echo $mode=='add' ? '*' : '' ?></label>
+                  <input type="password" name="user_password" id="user_password" class="form-control" value="" placeholder="Password" />
 									<span class="help-block">Kosongkan jika tidak ingin mengubah Password sebelumnya.</span>
-	                            </div>
+	              </div>
 								<?php if ($mode=='add'): ?>
 									<div class="form-group">
 										<label class="control-label">Ulangi Password *</label>

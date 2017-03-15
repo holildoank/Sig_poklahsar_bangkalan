@@ -50,6 +50,12 @@
                 					</div>
                                 </div>
                                 <div class="row">
+                                  <div class="col-md-6">
+                                      <div class="form-group">
+                                          <label class="control-label"> Name Pemilik *</label>
+                                          <input type="text" name="pemilik" id="pemilik" class="form-control" value="<?php echo @$dt->pemilik ?>" placeholder="Nama Pemilik" />
+                                      </div>
+                                  </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label"> Name Poklahsar *</label>

@@ -65,6 +65,9 @@ if($mode=='olahan'){
 						<tr>
 							<th>No</th>
 							<th>Nama Olahan</th>
+							<th>Bahan</th>
+							<th>Jumlah</th>
+							<th>tahun</th>
 							<th>Aksi</th>
 						</tr>
 					</thead>
@@ -91,6 +94,9 @@ table_olahan = $('#table_olahan').DataTable({
 
     "columns": [
         {"orderable": false},
+				{"orderable": true},
+				{"orderable": true},
+				{"orderable": true},
         {"orderable": true},
         {"orderable": false}
     ],
@@ -100,6 +106,7 @@ table_olahan = $('#table_olahan').DataTable({
 });
 
 function btn_edit_olahan(id,nama,tahun_olahan,bahan,jumlah) {
+	// alert('hahah');
 	submode = 'edit';
 	$('#submode').val('edit');
 	$('.btn-insert').hide();
