@@ -7,8 +7,8 @@
                 <div class="container">
                     <!-- BEGIN LOGO -->
                     <div class="page-logo">
-                        <a href="index.html">
-                            <img src="<?php echo base_url() ?>/assets/layouts/layout3/img/logo-default.jpg" alt="logo" class="logo-default">
+                        <a href="#">
+                            <img src="<?php echo base_url() ?>/assets/layouts/layout3/img/bkl1.png" style="width:100px; height:40px; "alt="logo" class="logo-default" >
                         </a>
                     </div>
                     <!-- END LOGO -->
@@ -27,10 +27,12 @@
             <!-- BEGIN HEADER MENU -->
             <div class="page-header-menu">
                 <div class="container">
+                  <!-- <marquee >Tulisan Disini</marquee> -->
                     <!-- BEGIN HEADER SEARCH BOX -->
                     <form class="search-form" action="page_general_search.html" method="GET">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search" name="query">
+                            <!-- <img src="<?php echo base_url() ?>/assets/layouts/layout3/img/bkl1.png" style="width:100px; height:50px; "alt="logo" class="logo-default" > -->
+<!-- <marquee>TULISAN BERJALAN</marquee> -->
                             <span class="input-group-btn">
                                 <a href="javascript:;" class="btn submit">
                                     <i class="icon-magnifier"></i>
