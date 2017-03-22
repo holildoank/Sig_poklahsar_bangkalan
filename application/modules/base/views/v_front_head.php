@@ -9,6 +9,10 @@
         <meta content="" name="description" />
         <meta content="" name="author" />
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
+        <link href="<?php echo base_url() ?>assets/global/plugins/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
+
+        <link href="<?php echo base_url() ?>assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css" rel="stylesheet" type="text/css" />
+
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url() ?>/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url() ?>/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
@@ -50,6 +54,11 @@
         <script src="<?php echo base_url() ?>/assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
       <!-- PLUGINS -->
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
+        <script src="<?php echo base_url() ?>assets/global/scripts/datatable.js" type="text/javascript"></script>
+
+        <script src="<?php echo base_url() ?>assets/global/plugins/datatables/datatables.min.js" type="text/javascript"></script>
+
+        <script src="<?php echo base_url() ?>assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js" type="text/javascript"></script>
 
         <script src="<?php echo base_url() ?>/assets/global/scripts/app.min.js" type="text/javascript"></script>
 

@@ -47,7 +47,7 @@
                     <div class="hor-menu  ">
                         <ul class="nav navbar-nav">
                             <li class="menu-dropdown classic-menu-dropdown active">
-                                <a href="#"> Home
+                                <a href="<?php echo base_url() ?>"> Home
                                     <span class="arrow"></span>
                                 </a>
                             </li>
@@ -57,7 +57,12 @@
                                 </a>
                             </li>
                             <li class="menu-dropdown mega-menu-dropdown  ">
-                                <a href="<?php echo base_url() ?>/KelompokPoklahsar">Kelompok poklahsar
+                                <a href="<?php echo base_url() ?>/kelompok_Poklahsar_Bangkalan">Kelompok poklahsar
+                                    <span class="arrow"></span>
+                                </a>
+                            </li>
+                            <li class="menu-dropdown mega-menu-dropdown  ">
+                                <a href="<?php echo base_url() ?>/Search_Route_Jalan">Route Jalan
                                     <span class="arrow"></span>
                                 </a>
                             </li>

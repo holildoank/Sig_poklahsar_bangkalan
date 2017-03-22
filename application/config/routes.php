@@ -50,6 +50,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller']   = 'frontend/C_frontend';
+$route['Search_Route_Jalan']           = 'frontend/C_frontend/route';
+$route['kelompok_Poklahsar_Bangkalan']  = 'frontend/C_frontend/kelompokPk';
+$route['kelompokPk/list_pk']  = 'frontend/C_frontend/list_pk';
+
 // $route['default_controller']    = 'front/c_front/index';
 $route['backlogin']        = 'base/c_login';
 $route['login/cek_login']        = 'base/c_login/cek_login';
