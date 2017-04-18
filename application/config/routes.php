@@ -53,6 +53,7 @@ $route['default_controller']   = 'frontend/C_frontend';
 $route['Search_Route_Jalan']           = 'frontend/C_frontend/route';
 $route['kelompok_Poklahsar_Bangkalan']  = 'frontend/C_frontend/kelompokPk';
 $route['kelompokPk/list_pk']  = 'frontend/C_frontend/list_pk';
+$route['VisiMisi']  = 'frontend/C_frontend/visimisi';
 
 // $route['default_controller']    = 'front/c_front/index';
 $route['backlogin']        = 'base/c_login';

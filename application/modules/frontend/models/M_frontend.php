@@ -71,7 +71,7 @@ class M_frontend extends CI_Model{
                 $ar_olahan = [];
                 $x = 0;
                 foreach ($data_->result() as $fit) {
-                      array_push($ar_olahan, '<a class="btn btn-success btn-sm">'. $fit->bahanpoklahsar_nama .'</a>'  .'   '. $fit->tahun_olahan .'   '. 'Hasil Olahan '. '<a class="btn btn-danger btn-sm">'.$fit->jumlah.'</a>' );
+                      array_push($ar_olahan, '<a class="btn btn-success btn-sm">'. $fit->bahanpoklahsar_nama .'</a>'  .'   '. $fit->tahun_olahan .'   '. 'Hasil Olahan '. '<a class="btn btn-danger btn-sm">'.$fit->jumlah.'  '.'Kg'.'</a>' );
                 }
                 $str_fitur = implode('<br>', $ar_olahan);
             $r = array();

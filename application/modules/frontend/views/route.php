@@ -39,17 +39,21 @@
                                                     <div class="col-md-6">
                                                         <label class="control-label">Asal</label>
                                                             <div class="mt-radio-list">
-                                                                <label class="mt-radio mt-radio-outline"> Database
-                                                                    <input type="radio" value="1" name="from_asal" class="from_asal" id="from_asal" checked>
+                                                                <!-- <label class="mt-radio mt-radio-outline"> Database
+                                                                    <input type="radio" value="1" name="from_asal_cek" class="from_asal_cek" id="from_asal_cek" checked>
                                                                     <span></span>
                                                                 </label>
                                                                 <label class="mt-radio mt-radio-outline">Manual
-                                                                    <input type="radio" value="2" name="from_asal" class="from_asal" id="from_asal">
+                                                                    <input type="radio" value="2" name="from_asal_cek" class="from_asal_cek" id="from_asal_cek">
                                                                     <span></span>
-                                                                </label>
+                                                                </label> -->
+                                                                <select class="form-control from_asal_cek" name="from_asal_cek" id="from_asal_cek">
+                                                                  <option value="1">Database</option>
+                                                                  <option value="2">Manual</option>
+                                                                </select>
                                                             </div>
                                                             <div class="database_asal" id="database_asal">
-                                                              <select class="form-control asal_db" name="asal_db" id="asal_db">
+                                                              <select class="form-control asal_db" name="asal" id="asal_db">
                                                                 <option value="">Asal Anda</option>
                                                                 <?php foreach ($get_data->result() as $r): ?>
                                           												<?php echo '<option value="'.$r->lat.','.$r->long.'">'.$r->poklahsar_nama.' - '.$r->pemilik.'</option>' ?>
@@ -64,17 +68,21 @@
                                                     <div class="col-md-6">
                                                       <label class="control-label">Tujuan</label>
                                                           <div class="mt-radio-list">
-                                                              <label class="mt-radio mt-radio-outline">Database
+                                                              <!-- <label class="mt-radio mt-radio-outline">Database
                                                                   <input type="radio" value="1" name="tujuan_from" id="tujuan_from" checked>
                                                                   <span></span>
                                                               </label>
                                                               <label class="mt-radio mt-radio-outline">Manual
                                                                   <input type="radio" value="2" name="tujuan_from" id="tujuan_from">
                                                                   <span></span>
-                                                              </label>
+                                                              </label> -->
+                                                              <select class="form-control tujuan_from" name="tujuan_from" id="tujuan_from">
+                                                                <option value="1">Database</option>
+                                                                <option value="2">Manual</option>
+                                                              </select>
                                                           </div>
                                                           <div class="database_tujuan" id="database_tujuan">
-                                                              <select class="form-control tujuan" name="tujuan" id="tujuan_db">
+                                                              <select class="form-control tujuan_db" name="tujuan" id="tujuan_db">
                                                                 <option value="">Pilih Tujuan Anda</option>
                                                                 <?php foreach ($get_data->result() as $r): ?>
                                           												<?php echo '<option value="'.$r->lat.','.$r->long.'">'.$r->poklahsar_nama.' - '.$r->pemilik.'</option>' ?>
@@ -82,7 +90,7 @@
                                                               </select>
                                                           </div>
                                                           <div class="manual_tujuan" id="manual_tujuan">
-                                                            <input type="text" name='tujuan' id="tujuan_mn" class="form-control tujuan input-circle" placeholder="Masukan Tujuan Anda">
+                                                            <input type="text" name='tujuan' id="tujuan_mn" class="form-control tujuan_mn input-circle" placeholder="Masukan Tujuan Anda">
                                                             <span class="help-block"> Contoh : UTM</span>
                                                           </div>
                                                     </div>
@@ -123,7 +131,7 @@
     $(function(){
       $('.database_asal').show();
       $('.manual_asal').hide();
-        $('[name="from_asal"]').click(function(){
+        $('[name="from_asal_cek"]').click(function(){
           var from_asal = $(this).prop('value');
           if(from_asal == 1){
     					$('.database_asal').show();
@@ -190,15 +198,22 @@
       $('#btn_cari').click(function(e) {
 
       	e.preventDefault();
-        var asl = $('.from_asal').val();
+        var asl = $('.from_asal_cek').val();
         // alert(asl);
         if(asl==1){
           var rom = $('.asal_db').val();
         }else{
           var rom = $('.asal_mn').val();
         }
+        var tujuan = $('.tujuan_from').val();
+        // alert(tujuan);
+        if(tujuan ==1){
+          var to =   $('.tujuan_db').val();
+        }else{
+          var to =   $('.tujuan_mn').val();
+        }
       	// var rom = $('.asal').val();
-      	var to = $('.tujuan').val();
+      	// var to = $('.tujuan').val();
         // alert(rom);
         directionsDisplay.setMap(map);
         directionsDisplay.setPanel(document.getElementById('panel'));

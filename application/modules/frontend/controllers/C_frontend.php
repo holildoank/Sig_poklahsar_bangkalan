@@ -31,5 +31,11 @@ class C_frontend extends MX_Controller {
 		$records = $this->M_frontend->ajax_list();
 		$this->output->set_content_type('application/json')->set_output(json_encode($records));
 	}
+	public function visimisi(){
+		$data = array();
+		// $data['kelompok'] = $this->m_base->get_data('t_poklahsar');
+		$data_view['content_layout'] = $this->load->view('visimisi', $data, true);
+		echo modules::run('base/c_base/front_view', $data_view);
+	}
 
 }
